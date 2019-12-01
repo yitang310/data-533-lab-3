@@ -9,18 +9,7 @@ class company:
         self.companyname=companyname
         self.companyyear=companyyear
         self.headquarter=headquarter
-
-    def display(self):
-        print("Company name: {} Found year: {} Head quarter: {} ".format(self.companyname,self.companyyear,self.headquarter))
-
-class brand:
-    def __init__(self,brandname=None,brandyear=None, brandcountry=None,belongyear=None,companyname=None,companyyear=None,headquarter=None):
-        company.__init__(self,companyname,companyyear,headquarter)
-        self.brandname=brandname
-        self.brandyear=brandyear
-        self.brandcountry=brandcountry
-        self.belongyear=belongyear
-    
+        
     def set_companyname(self,companyname):
         self.companyname=companyname
     
@@ -29,6 +18,17 @@ class brand:
     
     def set_headquarter(self,headquarter):
         self.headquarter=headquarter
+
+    def display(self):
+        print("Company name: {} Found year: {} Head quarter: {} ".format(self.companyname,self.companyyear,self.headquarter))
+
+class brand(company):
+    def __init__(self,brandname=None,brandyear=None, brandcountry=None,belongyear=None,companyname=None,companyyear=None,headquarter=None):
+        company.__init__(self,companyname,companyyear,headquarter)
+        self.brandname=brandname
+        self.brandyear=brandyear
+        self.brandcountry=brandcountry
+        self.belongyear=belongyear
     
     def set_brandname(self,brandname):
         self.brandname=brandname
