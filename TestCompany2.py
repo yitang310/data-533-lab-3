@@ -6,7 +6,7 @@
 
 import unittest
 from product.company.value_profit import *
-class Testcompany2(unittest.TestCase):
+class TestCompany2(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print("setUpClass")

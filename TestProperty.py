@@ -7,7 +7,7 @@
 import unittest
 from product.information import property as pr2
 
-class TestPrice(unittest.TestCase): # test class
+class TestProperty(unittest.TestCase): # test class
     
     @classmethod
     def setUpClass(cls):
