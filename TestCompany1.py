@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[29]:
+# In[1]:
 
 
 import unittest
 from product.company.brand_company import *
-class TestAdd(unittest.TestCase):
+class TestCompany1(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print("setUpClass")
@@ -24,7 +24,7 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(self.c1.companyname,"L'Oréal")
         self.assertEqual(self.c1.companyyear,1909)
         self.assertEqual(self.c1.headquarter,"Clichy, France")
-        self.assertEqual(self.c1.display(),None)
+        self.assertIsNone(self.c1.display())
         
     def test_brand(self):
         self.b1.set_brandname("Lancôme") 
@@ -39,11 +39,17 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(self.b1.brandyear,1935)  
         self.assertEqual(self.b1.brandcountry,"France") 
         self.assertEqual(self.b1.belongyear,1964)
-        self.assertEqual(self.b1.display(),None)
+        self.assertIsNone(self.b1.display())
         
     def tearDown(self):
         print("tearDown")
     @classmethod
     def tearDownClass(cls):
         print("tearDownClass")
+
+
+# In[ ]:
+
+
+
 
